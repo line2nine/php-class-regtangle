@@ -13,7 +13,7 @@ class Rectangle
 
     public function getArea()
     {
-         return $this->height * $this->width;
+        return $this->height * $this->width;
     }
 
     public function getPerimeter()
@@ -24,5 +24,15 @@ class Rectangle
     public function display()
     {
         return "Hinh chu nhat co Chieu Rong va Chieu Dai la: " . $this->width . "x" . $this->height;
+    }
+
+    public function render()
+    {
+        for ($i = 0; $i < $this->width; $i++) {
+            for ($j = 0; $j < $this->height; $j++) {
+                echo "*";
+            }
+            echo "<br>";
+        }
     }
 }
